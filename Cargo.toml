@@ -2,6 +2,13 @@
 name = "notify-mcp"
 version = "0.1.0"
 edition = "2024"
+description = "A Model Context Protocol (MCP) server for sending desktop notifications via a tool, with Docker support."
+authors = ["Michiel Roos <notify-mcp.free.bra@michielroos.com>"]
+license = "MIT"
+repository = "https://github.com/Tuurlijk/notify-mcp.git"
+readme = "README.md"
+keywords = ["mcp", "notifications", "desktop-notifications", "rust-mcp-sdk", "notify-rust"]
+categories = ["command-line-utilities", "web-programming::http-server", "api-bindings"]
 
 [dependencies]
 rocket = { version = "0.5.1", features = ["json"] }

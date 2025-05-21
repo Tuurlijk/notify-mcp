@@ -26,7 +26,7 @@ This is an exploration into mcp usage and will not be of use if you run this ser
 
 Replace `yourusername/notify-mcp.git` with the actual repository URL if you host it elsewhere.
 ```bash
-git clone https://github.com/yourusername/notify-mcp.git
+git clone https://github.com/Tuurlijk/notify-mcp.git
 cd notify-mcp
 ```
 

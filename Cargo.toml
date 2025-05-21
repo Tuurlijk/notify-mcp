@@ -1,0 +1,27 @@
+[package]
+name = "notify-mcp"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rocket = { version = "0.5.1", features = ["json"] }
+notify-rust = "4.5.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.108"
+rust-mcp-schema = "0.4.0"
+rust-mcp-sdk = { version = "0.2.6", features = ["server", "macros", "hyper-server"] }
+tokio = { version = "1.37.0", features = ["full"] }
+async-trait = "0.1.77"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+futures = "0.3.30"
+schemars = "0.8.16"
+openssl = { version = "0.10", features = ["vendored"] }
+
+# Optimize release builds for speed and size
+[profile.release]
+opt-level = 'z'     # Optimize for size (instead of speed)
+lto = "fat"         # Use FatLTO for better optimization
+codegen-units = 1   # Reduce parallel code generation for better optimization
+panic = "abort"     # Remove panic unwinding to reduce size
+strip = true        # Strip symbols from the binary
